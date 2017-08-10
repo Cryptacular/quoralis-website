@@ -1,0 +1,67 @@
+/* Darkest Grey: #1e1e1e */
+/* Dark Grey: #272727 */
+/* Green: #a2dd87 */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+    background: #161616 url('../images/zig-zag.png');
+    color: #eee;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Poiret One', sans-serif;
+}
+
+.qu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.qu-logo {
+    max-width: 128px;
+    height: auto;
+}
+
+.qu-links {
+    margin: 20px 0;
+}
+
+a {
+    color: #a2dd87;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.qu-links a {
+    margin: 0 10px;
+}
+
+.qu-container-contacts {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.qu-contact {
+    margin: 0 20px;
+}
+
+@media (min-width: 768px) {
+    .qu-container-contacts {
+        flex-direction: row;
+    }
+}

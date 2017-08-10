@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Quoralis: Creating FallCast</title>
+  <meta name="description" content="Creators of FallCast">
+  <meta name="author" content="Quoralis">
+
+  <link rel="stylesheet" href="./css/style.css?v=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway:300" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div class="qu-container">
+        <img src="./images/quoralis-logo.png" alt="Quoralis Logo" class="qu-logo">
+        <h1>Quoralis</h1>
+        <p>We're Quoralis and we're currently working on FallCast in the C-Prize 2017 competition. More coming soon!</p>
+        <div class="qu-links">
+            <a href="https://medium.com/quoralis">Blog</a> &middot; <a href="http://www.cprize.nz/">C-Prize</a>
+        </div>
+
+        <div class="qu-container-contacts">
+            <div class="qu-contact">
+                <h2>Sheldon Nunes</h2>
+                <a href="#" onclick="email(event, this, 'mailto:sheldon.nunes@quoralis.com')">Email</a>
+            </div>
+            <div class="qu-contact">
+                <h2>Nick Mertens</h2>
+                <a href="#" onclick="email(event, this, 'mailto:nick.mertens@quoralis.com')">Email</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function email(e, element, emailAddress) {
+            element.href = emailAddress;
+        }
+    </script>
+</body>
+</html>
