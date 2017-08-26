@@ -17,30 +17,79 @@
 </head>
 
 <body>
-    <div class="qu-container">
-        <img src="./images/quoralis-logo.png" alt="Quoralis Logo" class="qu-logo">
-        <h1>Quoralis</h1>
-        <p>We're Quoralis and we're currently working on FallCast in the C-Prize 2017 competition. More coming soon!</p>
-        <div class="qu-links">
-            <a href="https://medium.com/quoralis">Blog</a> &middot; <a href="http://www.cprize.nz/">C-Prize</a>
-        </div>
+    <header class="qu-header" id="quHeader">
+        <span>Quoralis</span>
+    </header>
 
-        <div class="qu-container-contacts">
-            <div class="qu-contact">
-                <h2>Sheldon Nunes</h2>
-                <a href="#" onclick="email(event, this, 'mailto:sheldon.nunes@quoralis.com')">Email</a>
-            </div>
-            <div class="qu-contact">
-                <h2>Nick Mertens</h2>
-                <a href="#" onclick="email(event, this, 'mailto:nick.mertens@quoralis.com')">Email</a>
-            </div>
+    <section class="qu-section">
+        <div class="qu-section-title qu-section-title--header">
+            <h1>Quoralis</h1>
         </div>
-    </div>
+        <div class="qu-section-content">
+            <img src="./images/quoralis-logo.png" alt="Quoralis Logo" class="qu-logo">
+            <p>As one of ten finalists in the C-Prize competition run by Callaghan Innovation and with their support, we are developing a new product that will help indicate fall risks in the elderly using a light and unobtrusive wearable device.</p>
+        </div>
+    </section>
 
+
+    <section class="qu-section">
+            <div class="qu-section-title">
+                <h1>FallCast</h1>
+            </div>
+            <div class="qu-section-content">
+                <p>FallCast is a wearable technology that we are developing as part of the C-Prize competition. We aim to use this wearable to improve predictions of when a person is likely to fall, providing an opportunity to intervene before an injury occurs.</p>
+                <p>If you are interested in following our journey from idea to prototype to released product, please check our blog - we update it frequently.</p>
+            </div>
+        </section>
+
+    <section class="qu-section">
+        <div class="qu-section-title">
+            <h1>Our Team</h1>
+        </div>
+        <div class="qu-section-content">
+            <h2 class="qu-content-title">Sheldon Nunes</h2>
+
+            <p>As a kid I was always the one taking various objects or toys apart, finding out how they worked and much to the dismay of my parents, forgetting to put them back together. Today, I retain that curiosity and fascination from my childhood. It is no surprise then, that my passion lies in building both hardware and software solutions.</p>
+            
+            <p>My experience in software development lies in the medical field. This has exposed me to many of the processes for getting a medical device to the market and an understanding of just how important it is to build the right product. My hobbyist hardware projects have given me the experience necessary to bridge the gap between software and hardware solutions. I see Fallcast as an opportunity to combine my hardware and software roles and to provide a technology solution that will improve people's lives.</p>
+
+            <a href="#" onclick="email(event, this, 'mailto:sheldon.nunes@quoralis.com')" class="qu-button">Email</a>
+
+            <h2 class="qu-content-title">Nick Mertens</h2>
+
+            <p>I am a designer with a focus on UX and UI (user experience &amp; user interface) and I’ve got a soft spot for new technology, gadgets and how they can change the way you go through your day. I can help the team accomplish their goals by providing the customer with a great experience.</p>
+            
+            <p>I have experience with web and mobile development, which will speed the design process along by speaking a similar technical language. My experience integrating mobile applications with medical devices has provided me with insight into the benefits of medical technology innovation and how a product like FallCast can enrich the lifestyle of technology users.</p>
+
+            <a href="#" onclick="email(event, this, 'mailto:nick.mertens@quoralis.com')" class="qu-button">Email</a>
+        </div>
+    </section>
+
+    <section class="qu-section">
+            <div class="qu-section-title">
+                <h1>More</h1>
+            </div>
+            <div class="qu-section-content">
+                <h2 class="qu-content-title">Links</h2>
+                <a href="https://medium.com/quoralis" class="qu-button">Blog</a>
+                <a href="http://www.cprize.nz/" class="qu-button">C-Prize</a>
+            </div>
+    </section>
+    
     <script>
         function email(e, element, emailAddress) {
             element.href = emailAddress;
         }
+
+        window.addEventListener("scroll", function() {
+            var header = document.getElementById("quHeader");
+
+            if (document.body.scrollTop > 200) {
+                header.classList.add("qu-header--visible");
+            } else {
+                header.classList.remove("qu-header--visible")
+            }
+        });
     </script>
 </body>
 </html>
