@@ -120,10 +120,14 @@ p {
 .qu-logo {
     float: right;
     margin-left: 3rem;
-    max-width: 12rem;
+    max-width: 8rem;
 }
 
 @media (min-width: 50rem) {
+    .qu-logo {
+        max-width: 12rem;
+    }
+
     .qu-section {
         flex-direction: row;
     }
