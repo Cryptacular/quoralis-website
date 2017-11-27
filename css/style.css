@@ -20,7 +20,10 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h1 a,
+h2 a,
+h3 a {
     font-family: 'Poiret One', sans-serif;
     font-weight: 400;
 }
@@ -121,6 +124,30 @@ p {
     float: right;
     margin-left: 3rem;
     max-width: 8rem;
+}
+
+.qu-blog-post {
+    border-bottom: 2px solid #91d883;
+    max-width: 100%;
+    padding: 3rem 0 5rem;
+}
+
+.qu-blog-post:first-child {
+    padding-top: 0;
+}
+
+.qu-blog-post:last-child {
+    padding-bottom: 0;
+    border: none;
+}
+
+.qu-blog-post img {
+    max-width: 100%;
+    height: auto;
+}
+
+.qu-blog-post hr {
+    display: none;
 }
 
 @media (min-width: 50rem) {
