@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Quoralis: Blog</title>
+  <meta name="description" content="Creators of FallCast">
+  <meta name="author" content="Quoralis">
+
+  <link rel="stylesheet" href="../css/style.css?v=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway:300" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <header class="qu-header" id="quHeader">
+        <a href="/">Quoralis</a>
+    </header>
+
+    <section class="qu-section">
+        <div class="qu-section-title qu-section-title--header">
+            <h1><a href="/">Quoralis</a></h1>
+        </div>
+        <div class="qu-section-content">
+            <h1>Welcome to the blog!</h1>
+            <p>This is where we post regular content about our journey.</p>
+            <p>For more information, check out our Medium blog!</p>
+            <a href="https://medium.com/quoralis" class="qu-button">Medium</a>
+        </div>
+    </section>
+    
+    <section class="qu-section">
+        <div class="qu-section-title">
+            <h1>Blog</h1>
+        </div>
+        <div class="qu-section-content">
+            <div id="blog">
+                <div v-if="loading">Loading...</div>
+                <div class="qu-blog-post" v-for="post in posts">
+                    <h1 v-text="post.title[0]"></h1>
+                    <p v-text="post['dc:creator'][0]"></p>
+                    <div class="qu-blogPost-content" v-html="post['content:encoded'][0]"></div>
+                    <a class="qu-button" v-bind:href="post.link[0]" target="_blank">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function email(e, element, emailAddress) {
+            element.href = emailAddress;
+        }
+
+        window.addEventListener("scroll", function() {
+            var header = document.getElementById("quHeader");
+
+            if (window.scrollY > 200) {
+                header.classList.add("qu-header--visible");
+            } else {
+                header.classList.remove("qu-header--visible")
+            }
+        });
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+        ga('create', 'UA-105343975-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
