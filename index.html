@@ -18,7 +18,11 @@
 
 <body>
     <header class="qu-header" id="quHeader">
-        <a href="/">Quoralis</a>
+        <nav class="qu-nav">
+            <a class="qu-nav-link" href="/">Home</a>
+            <a class="qu-nav-link" href="/Blog">Blog</a>
+            <a class="qu-nav-link" href="https://twitter.com/quoralis" target="_blank">Twitter</a>
+        </nav>
     </header>
 
     <section class="qu-section">
@@ -68,29 +72,20 @@
 
     <section class="qu-section">
             <div class="qu-section-title">
-                <h1>More</h1>
+                <h1>Links</h1>
             </div>
             <div class="qu-section-content">
-                <h2 class="qu-content-title">Links</h2>
                 <a href="/blog" class="qu-button">Blog</a>
-                <a href="http://www.cprize.nz/" class="qu-button">C-Prize</a>
-            </div>
+                <a href="https://medium.com/quoralis" class="qu-button" target="_blank">Medium</a>
+                <a href="https://twitter.com/quoralis" class="qu-button" target="_blank">Twitter</a>
+                <a href="http://www.cprize.nz/" class="qu-button" target="_blank">C-Prize</a>
+        </div>
     </section>
     
     <script>
         function email(e, element, emailAddress) {
             element.href = emailAddress;
         }
-
-        window.addEventListener("scroll", function() {
-            var header = document.getElementById("quHeader");
-
-            if (window.scrollY > 200) {
-                header.classList.add("qu-header--visible");
-            } else {
-                header.classList.remove("qu-header--visible")
-            }
-        });
     </script>
 
     <script>

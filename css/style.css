@@ -10,7 +10,7 @@ html, body {
 
 body {
     margin: 0;
-    padding: 2rem;
+    padding: 7rem 2rem 2rem;
 
     background: #161616 url('../images/bg-pattern.png') repeat top left;
     color: #eee;
@@ -32,6 +32,15 @@ a {
     color: #91d883;
     font-weight: bold;
     text-decoration: none;
+    transition: color 0.3s ease-out;
+}
+
+a:hover {
+    color: #e3ffdd;
+}
+
+a:focus {
+    color: #5a944f;
 }
 
 p {
@@ -55,14 +64,13 @@ p {
     font-family: 'Poiret One', sans-serif;
     font-size: 2.4rem;
     line-height: 2.4rem;
-    opacity: 0.0;
     text-align: center;
     transition: opacity 0.3s ease-out;
 }
 
-.qu-header.qu-header--visible {
-    opacity: 1.0;
-}    
+.qu-nav .qu-nav-link {
+    margin: 0 2rem;
+}
 
 .qu-section {
     display: flex;
@@ -111,7 +119,8 @@ p {
     margin: 0 1rem 1rem 0;
     padding: 1rem 3rem;
     text-decoration: none;
-    transition: background-color 0.3s ease-out;
+    transition: color 0.3s ease-out,
+                background-color 0.3s ease-out;
 }
 
 .qu-button:hover {
@@ -171,7 +180,7 @@ p {
 
 @media (min-width: 50rem) {
     body {
-        padding: 5rem;
+        padding: 10rem 5rem 5rem;
     }
 
     p {

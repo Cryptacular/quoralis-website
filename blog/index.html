@@ -18,7 +18,11 @@
 
 <body>
     <header class="qu-header" id="quHeader">
-        <a href="/">Quoralis</a>
+        <nav class="qu-nav">
+            <a class="qu-nav-link" href="/">Home</a>
+            <a class="qu-nav-link" href="/Blog">Blog</a>
+            <a class="qu-nav-link" href="https://twitter.com/quoralis" target="_blank">Twitter</a>
+        </nav>
     </header>
 
     <section class="qu-section">
@@ -29,7 +33,7 @@
             <h1>Welcome to the blog!</h1>
             <p>This is where we post regular content about our journey.</p>
             <p>For more information, check out our Medium blog!</p>
-            <a href="https://medium.com/quoralis" class="qu-button">Medium</a>
+            <a href="https://medium.com/quoralis" class="qu-button" target="_blank">Medium</a>
         </div>
     </section>
     
@@ -67,16 +71,6 @@
         function email(e, element, emailAddress) {
             element.href = emailAddress;
         }
-
-        window.addEventListener("scroll", function() {
-            var header = document.getElementById("quHeader");
-
-            if (window.scrollY > 200) {
-                header.classList.add("qu-header--visible");
-            } else {
-                header.classList.remove("qu-header--visible")
-            }
-        });
     </script>
 
     <script>
