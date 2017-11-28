@@ -127,10 +127,18 @@ p {
     background: #539446;
 }    
 
-.qu-logo {
+.qu-logo{
     float: right;
-    margin-left: 3rem;
+    margin: 0 0 3rem 3rem;
     max-width: 8rem;
+}
+
+.qu-about-photo {
+    border: 3px solid #91d883;
+    border-radius: 50%;
+    float: right;
+    margin: 0 0 3rem 3rem;
+    max-width: 12rem;
 }
 
 .qu-blog-post {
