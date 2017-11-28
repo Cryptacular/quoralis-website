@@ -144,6 +144,14 @@ p {
     height: auto;
 }
 
+.qu-blog-post figure {
+    margin: 0;
+}
+
+.qu-blog-post figcaption {
+    font-style: italic;
+}
+
 .qu-blog-post hr {
     display: none;
 }

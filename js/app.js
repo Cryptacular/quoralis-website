@@ -2,11 +2,7 @@ var app = new Vue({
     el: '#blog',
     data: {
         loading: true,
-        posts: [
-            {
-                title: []
-            }
-        ]
+        posts: []
     },
     mounted: function() {
         this.fetchPosts();
@@ -14,7 +10,7 @@ var app = new Vue({
     methods: {
         fetchPosts: function() {
             var vm = this;
-            fetch('https://quoralis-api.herokuapp.com/posts', {
+            fetch('https://quoralis-api-ytyfcgzbqj.now.sh/posts', {
                     method: 'GET',
                     headers: {
                         'Accept': 'application/json',
