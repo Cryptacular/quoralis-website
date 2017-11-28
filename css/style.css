@@ -130,6 +130,14 @@ p {
     padding: 3rem 0 5rem;
 }
 
+.qu-blog-loading {
+    display: none;
+}
+
+.qu-blog-loading.qu-blog-loaded {
+    display: inherit;
+}
+
 .qu-blog-post:first-child {
     padding-top: 0;
 }
@@ -137,6 +145,11 @@ p {
 .qu-blog-post:last-child {
     padding-bottom: 0;
     border: none;
+}
+
+.qu-blogPost-author {
+    color: #ccc;
+    font-style: italic;
 }
 
 .qu-blog-post img {

@@ -33,22 +33,35 @@
         </div>
     </section>
     
-    <section class="qu-section">
-        <div class="qu-section-title">
-            <h1>Blog</h1>
-        </div>
-        <div class="qu-section-content">
-            <div id="blog">
-                <div v-if="loading">Loading...</div>
-                <div class="qu-blog-post" v-for="post in posts">
-                    <h1 v-text="post.title[0]"></h1>
-                    <p v-text="post['dc:creator'][0]"></p>
-                    <div class="qu-blogPost-content" v-html="post['content:encoded'][0]"></div>
-                    <a class="qu-button" v-bind:href="post.link[0]" target="_blank">Read More</a>
+    <div id="blog">
+        <div v-if="loading">
+            <section class="qu-section">
+                <div class="qu-section-title">
+                    <h1>Loading...</h1>
                 </div>
-            </div>
+                <div class="qu-section-content">
+                    <p>One moment!</p>
+                </div>
+            </section>
         </div>
-    </section>
+        <div v-else v-for="post in posts" class="qu-blog-loading" v-bind:class="{ 'qu-blog-loaded': !loading }">
+            <section class="qu-section">
+                <div class="qu-section-title">
+                    <h1 v-text="post.title[0]"></h1>
+                </div>
+                <div class="qu-section-content">
+                    <div id="blog">
+                        <div class="qu-blog-post">
+                            <h1 v-text="post.title[0]"></h1>
+                            <p class="qu-blogPost-author">Author: <span v-text="post['dc:creator'][0]"></span></p>
+                            <div class="qu-blogPost-content" v-html="post['content:encoded'][0]"></div>
+                            <a class="qu-button" v-bind:href="post.link[0]" target="_blank">Read on Medium</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
     
     <script>
         function email(e, element, emailAddress) {
@@ -76,7 +89,7 @@
         ga('send', 'pageview');
     </script>
 
-    <script src="https://unpkg.com/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="/js/app.js"></script>
 </body>
 </html>
