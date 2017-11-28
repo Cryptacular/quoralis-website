@@ -31,13 +31,13 @@
         </div>
         <div class="qu-section-content">
             <h1>Welcome to the blog!</h1>
-            <p>This is where we post regular content about our journey.</p>
-            <p>For more information, check out our Medium blog!</p>
-            <a href="https://medium.com/quoralis" class="qu-button" target="_blank">Medium</a>
+            <p>This is where we post regular content about our journey. These are all posted on Medium and displayed here for your leisure!</p>
+            <a href="https://medium.com/quoralis" class="qu-button" target="_blank">Read on Medium</a>
+            <a href="https://medium.com/feed/quoralis" class="qu-button" target="_blank">RSS Feed</a>
         </div>
     </section>
     
-    <div id="blog">
+    <div id="blog" class="qu-blog">
         <div v-if="loading">
             <section class="qu-section">
                 <div class="qu-section-title">
@@ -50,14 +50,13 @@
         </div>
         <div v-else v-for="post in posts" class="qu-blog-loading" v-bind:class="{ 'qu-blog-loaded': !loading }">
             <section class="qu-section">
-                <div class="qu-section-title">
+                <div class="qu-section-title qu-section-title--small">
                     <h1 v-text="post.title[0]"></h1>
+                    <p class="qu-blogPost-author" v-text="post['dc:creator'][0]"></p>
                 </div>
                 <div class="qu-section-content">
                     <div id="blog">
                         <div class="qu-blog-post">
-                            <h1 v-text="post.title[0]"></h1>
-                            <p class="qu-blogPost-author">Author: <span v-text="post['dc:creator'][0]"></span></p>
                             <div class="qu-blogPost-content" v-html="post['content:encoded'][0]"></div>
                             <a class="qu-button" v-bind:href="post.link[0]" target="_blank">Read on Medium</a>
                         </div>

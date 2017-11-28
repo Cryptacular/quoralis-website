@@ -88,12 +88,22 @@ p {
     margin: 0;
 }
 
+.qu-section-title--small h1 {
+    font-size: 1em;
+}
+
 .qu-section-title.qu-section-title--header {
     color: #91d883;
 }
 
-.qu-section-content {
+.qu-section-content,
+.qu-blog .qu-section:first-of-type .qu-section-content {
     border-top: 3px solid #1d1d1d;
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+.qu-blog .qu-section:first-of-type .qu-section-title {
     margin-top: 2rem;
     padding-top: 2rem;
 }
@@ -167,6 +177,7 @@ p {
 .qu-blogPost-author {
     color: #ccc;
     font-style: italic;
+    text-align: right;
 }
 
 .qu-blog-post img {
