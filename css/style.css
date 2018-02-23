@@ -97,7 +97,20 @@ h2 {
     max-width: 580px;
 }
 
+.qu-banner-arrow {
+    animation: arrow-bounce infinite alternate 1.2s ease-in-out;
+}
+
 .qu-banner-arrow img {
     width: 75px;
     height: auto;
+}
+
+@keyframes arrow-bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(5px);
+    }
 }
