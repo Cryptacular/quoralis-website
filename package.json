@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "python -m SimpleHTTPServer 8000"
+    "start": "serve ."
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Cryptacular/quoralis-website/issues"
   },
-  "homepage": "https://github.com/Cryptacular/quoralis-website#readme"
+  "homepage": "https://github.com/Cryptacular/quoralis-website#readme",
+  "devDependencies": {
+    "serve": "^6.4.11"
+  }
 }
