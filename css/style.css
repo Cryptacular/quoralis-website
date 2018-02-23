@@ -1,0 +1,103 @@
+body {
+    background: #F2E4D3;
+    color: #333333;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+a:link,
+a:visited {
+    color: #7A1B0D;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Poiret One', sans-serif;
+}
+
+h1 {
+    font-size: 64px;
+    line-height: 75px;
+}
+
+h2 {
+    font-size: 48px;
+    line-height: 56px;
+}
+
+.qu-banner {
+    align-items: stretch;
+    display: flex;
+    background: url('../images/banner-home.jpg') center center;
+    background-size: cover;
+    color: #F2F2F2;
+    flex: 1;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.qu-banner-header {
+    align-items: center;
+    color: #F2F2F2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 18px;
+}
+
+.qu-banner-header .qu-nav-link:link,
+.qu-banner-header .qu-nav-link:visited {
+    color: #F2F2F2;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 57px;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+.qu-banner-header .qu-nav-link:first-child {
+    margin-left: 0;
+}
+
+.qu-banner-header a:first-child {
+
+}
+
+.qu-header-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.qu-header-title {
+    align-items: center;
+    display: flex;
+    font-size: 36px;
+    line-height: 42px;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+.qu-banner-title {
+    font-size: 32px;
+    line-height: 38px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.qu-banner-fallcast {
+    height: auto;
+    margin-bottom: 35px;
+    max-width: 580px;
+}
+
+.qu-banner-arrow img {
+    width: 75px;
+    height: auto;
+}
