@@ -66,7 +66,8 @@ form {
 
 input,
 textarea,
-button {
+button,
+.qu-button {
     background: #E3CFB8;
     border: 0;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
@@ -81,17 +82,38 @@ textarea:focus {
     outline: 2px solid #7A1B0D;
 }
 
-button {
+button,
+.qu-button {
     background: #7A1B0D;
-    color: #F2E4D3;
     cursor: pointer;
     font-family: 'Poiret One', sans-serif;
     font-size: 24px;
     line-height: 30px;
     text-align: center;
     padding: 10px 20px;
+    transition: background .1s ease-out;
 }
 
+button,
+.qu-button,
+.qu-button:link,
+.qu-button:visited {
+    color: #F2E4D3;
+}
+
+button:hover,
+button:focus,
+.qu-button:hover,
+.qu-button:focus {
+    background: #AB301E;
+}
+
+.qu-button:hover:after,
+.qu-button:focus:after {
+    border-width: 0;
+}
+
+.qu-button:focus,
 button:focus {
     outline: 2px solid #E3CFB8;
 }
@@ -124,6 +146,17 @@ input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
     font-style: italic;
     color: rgba(122, 27, 13, 0.5);
+}
+
+blockquote {
+    border-left: 2px solid rgba(122, 27, 13, 0.5);
+    font-style: italic;
+    margin: 0 30px 18px;
+    padding-left: 30px;
+}
+
+hr {
+    display: none;
 }
 
 .qu-banner {
@@ -287,6 +320,42 @@ textarea::-webkit-input-placeholder {
 .qu-form-group input {
     flex: 1;
     margin: 0 0 18px;
+}
+
+.qu-blog-article {
+    border-bottom: 2px solid #7A1B0D;
+}
+
+.qu-blog-article:last-child {
+    border-bottom: 0;
+}
+
+.qu-blog-article--loaded {
+    animation: blog-fade-in 1s ease-out;
+}
+
+figure {
+    margin: 30px 0;
+}
+
+figcaption,
+.qu-blogPost-author {
+    font-style: italic;
+    text-align: center;
+}
+
+.qu-blogPost-footer {
+    margin: 40px 0 30px;
+    text-align: center;
+}
+
+@keyframes blog-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes arrow-bounce {
