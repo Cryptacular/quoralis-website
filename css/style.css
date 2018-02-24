@@ -322,6 +322,57 @@ hr {
     margin: 0 0 18px;
 }
 
+.qu-tiles-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.qu-tiles-row:first-child {
+    margin-top: 0;
+}
+
+.qu-tile {
+    align-items: center;
+    background: black;
+    box-sizing: border-box;
+    color: #F2F2F2;
+    display: flex;
+    justify-content: flex-start;
+    min-height: 150px;
+    margin: 10px auto;
+    max-width: 440px;
+    padding: 20px;
+    width: 100%;
+}
+
+.qu-tile--injury {
+    background: #5E361F;
+}
+
+.qu-tile--hip {
+    background: #5C211D;
+}
+
+.qu-tile--brain {
+    background: #5D2C35;
+}
+
+.qu-tile--fear {
+    background: #4B3261;
+}
+
+.qu-tile-icon {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 4em;
+    line-height: 80%;
+    margin-right: 20px;
+}
+
+.qu-tile-icon img {
+    max-width: 100px;
+}
+
 .qu-blog-article {
     border-bottom: 2px solid #7A1B0D;
 }
@@ -406,5 +457,22 @@ figcaption,
     
     .qu-form-group input {
         margin: 0 8px 0 0;
+    }
+    
+    .qu-tiles-row {
+        flex-direction: row;
+        margin-top: 20px;
+    }
+
+    .qu-tile {
+        margin: 0 10px;
+    }
+
+    .qu-tile:first-child {
+        margin-left: 0;
+    }
+    
+    .qu-tile:last-child {
+        margin-right: 0;
     }
 }
