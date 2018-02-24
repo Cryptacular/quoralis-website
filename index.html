@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <section class="qu-banner">
+    <section class="qu-banner qu-banner--hero">
         <div class="qu-banner-header" id="quHeader">
             <h1 class="qu-header-title">
                 <img src="/images/logo-white.png" alt="" class="qu-header-logo" />
@@ -73,21 +73,33 @@
     </section>
 
     <section class="qu-banner">
-        <h1>Updates</h1>
-        <p>Sign up for updates below to be the first to know as FallCast gets closer to launch, as well as occasional updates. No spam and your email address will not be shared with anyone, that’s a promise!</p>
-        <form action="">
-            <input type="text" name="email" id="email" />
-            <button type="submit">Subscribe</button>
-        </form>
+        <div class="qu-section">
+            <h1>Updates</h1>
+            <p>Sign up for updates below to be the first to know as FallCast gets closer to launch, as well as occasional updates. No spam and your email address will not be shared with anyone, that’s a promise!</p>
+            <form action="">
+                <div class="qu-form-group">
+                    <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Email Address" />
+                    <button type="submit">Subscribe</button>
+                </div>
+            </form>
+        </div>
     </section>
 
     <footer class="qu-footer">
-        <span>© Copyright Quoralis 2018</span>
-        <img src="/images/logo-footer.png" alt="Quoralis" />
+        <div class="qu-footer-copyright">© Copyright Quoralis 2018</div>
+        <a href="/" class="qu-footer-logoLink">
+            <img src="/images/logo-white.png" alt="Quoralis" class="qu-footer-logo" />
+        </a>
         <div class="qu-footer-links">
-            <a href="https://twitter.com/quoralis">Twitter</a>
-            <a href="https://medium.com/quoralis">Medium</a>
-            <a href="https://www.linkedin.com/company/quoralis/">LinkedIn</a>
+            <a href="https://twitter.com/quoralis" target="_blank" class="qu-footer-iconLink">
+                <img src="/images/twitter.png" alt="Twitter" class="qu-footer-icon" />
+            </a>
+            <a href="https://medium.com/quoralis" target="_blank" class="qu-footer-iconLink">
+                <img src="/images/medium.png" alt="Medium" class="qu-footer-icon" />
+            </a>
+            <a href="https://www.linkedin.com/company/quoralis/" target="_blank" class="qu-footer-iconLink">
+                <img src="/images/linkedin.png" alt="LinkedIn" class="qu-footer-icon" />
+            </a>
         </div>
     </footer>
     
