@@ -127,7 +127,7 @@ textarea::-webkit-input-placeholder {
 }
 
 .qu-banner {
-    align-items: stretch;
+    align-items: center;
     display: flex;
     background: url('../images/banner-home.jpg') center center;
     background-size: cover;
@@ -140,17 +140,19 @@ textarea::-webkit-input-placeholder {
     text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
 }
 
+.qu-banner--hero {
+    align-items: stretch;
+    height: 100vh;
+}
+
 .qu-banner,
 .qu-banner h1,
 .qu-banner h2,
 .qu-banner h3,
 .qu-banner h4,
 .qu-banner h5 {
+    margin-top: 0;
     color: #F2F2F2;
-}
-
-.qu-banner--hero {
-    height: 100vh;
 }
 
 .qu-banner-header {
@@ -194,8 +196,8 @@ textarea::-webkit-input-placeholder {
 }
 
 .qu-banner-title {
-    font-size: 32px;
-    line-height: 38px;
+    font-size: 24px;
+    line-height: 32px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -221,12 +223,18 @@ textarea::-webkit-input-placeholder {
 }
 
 .qu-footer {
+    background: url('../images/wool.png') repeat top left;
+    padding: 18px;
+}
+
+.qu-footer-content {
     align-items: center;
     background: url('../images/wool.png') repeat top left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 18px;
+    margin: 0 auto;
+    max-width: 900px;
 }
 
 .qu-footer,
@@ -272,12 +280,13 @@ textarea::-webkit-input-placeholder {
 
 .qu-form-group {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
 .qu-form-group input {
     flex: 1;
-    margin-right: 8px;
+    margin: 0 0 18px;
 }
 
 @keyframes arrow-bounce {
@@ -313,7 +322,20 @@ textarea::-webkit-input-placeholder {
         margin-left: 0;
     }
 
-    .qu-footer {
+    .qu-banner-title {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .qu-footer-content {
         flex-direction: row;
+    }
+    
+    .qu-form-group {
+        flex-direction: row;
+    }
+    
+    .qu-form-group input {
+        margin: 0 8px 0 0;
     }
 }
