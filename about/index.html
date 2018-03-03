@@ -82,12 +82,29 @@
         <div class="qu-section">
             <h1>Updates</h1>
             <p>Sign up for updates below to be the first to know as FallCast gets closer to launch, as well as occasional updates. No spam and your email address will not be shared with anyone, that’s a promise!</p>
-            <form action="">
-                <div class="qu-form-group">
-                    <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Email Address" />
-                    <button type="submit">Subscribe</button>
+            
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="https://quoralis.us17.list-manage.com/subscribe/post?u=cf5f59f8c820258fb30bdf359&amp;id=7b99786b1e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+                    <div class="qu-form-group">
+                        <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Email Address" required>
+                        <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="qu-button">Subscribe</button>
+                    </div>
+                    <ul class="qu-list qu-list--horizontal" id="mce-TYPE">
+                        <li><input type="radio" value="65+" name="TYPE" id="mce-TYPE-0"><label for="mce-TYPE-0">65+</label></li>
+                        <li><input type="radio" value="Family" name="TYPE" id="mce-TYPE-1"><label for="mce-TYPE-1">Family</label></li>
+                        <li><input type="radio" value="Caregiver/Nurse" name="TYPE" id="mce-TYPE-2"><label for="mce-TYPE-2">Caregiver/Nurse</label></li>
+                        <li><input type="radio" value="Retirement Village" name="TYPE" id="mce-TYPE-3"><label for="mce-TYPE-3">Retirement Village</label></li>
+                    </ul>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cf5f59f8c820258fb30bdf359_7b99786b1e" tabindex="-1" value=""></div>
+                </form>
+                <div id="mce-responses" class="clear">
+                    <div class="qu-mailchimpResponse qu-mailchimpResponse--error" id="mce-error-response" style="display:none"></div>
+                    <div class="qu-mailchimpResponse qu-mailchimpResponse--success" id="mce-success-response" style="display:none"></div>
                 </div>
-            </form>
+            </div>
+            <!--End mc_embed_signup-->
         </div>
     </section>
 
@@ -111,7 +128,12 @@
         </div>
     </footer>
     
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script src="/js/utils.js"></script>
+    <script src="/js/subscribe.js"></script>
     <script src="/js/ga.js"></script>
 </body>
 </html>
