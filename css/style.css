@@ -247,6 +247,7 @@ hr {
 }
 
 .qu-banner-arrow img {
+    cursor: pointer;
     width: 75px;
     height: auto;
 }
