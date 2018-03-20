@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Quoralis: Creating FallCast</title>
-  <meta name="description" content="Creators of FallCast">
+  <title>Quoralis: Our Blog</title>
+  <meta name="description" content="Contact the team at Quoralis">
   <meta name="author" content="Quoralis">
   <meta name="theme-color" content="#161616" />
   
@@ -17,6 +17,9 @@
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
+
+  <script src="/js/polyfills/promise.min.js"></script>
+  <script src="/js/polyfills/fetch.min.js"></script>
 </head>
 
 <body>
@@ -35,8 +38,7 @@
         </div>
 
         <div class="qu-banner-title">
-            <img src="/images/fallcast-logo-leaf.png" alt="FallCast" class="qu-banner-fallcast" />
-            <p>The next generation of elderly care.</p>
+            <h2>Contact us!</h2>
         </div>
 
         <div class="qu-banner-arrow">
@@ -45,55 +47,34 @@
     </section>
 
     <section class="qu-section">
-        <h1>FallCast</h1>
-        <p>Quoralis is currently developing FallCast, a wearable solution designed to keep the elderly on their feet. Suitable for use at home for independent living and at retirement villages for assisted living. Family and caregivers will receive alerts when we detect the older person is at risk of falling. This will allow the older person to stay confident and safe, so they can enjoy a more independent life for longer.</p>
-        
-        <h2>Impact</h2>
-        <p>Falls are one of the most common causes of injury in people aged 65+ and can lead to a massive reduction in quality of life or even death. It also brings a major cost that ACC has to pay each year and with an aging population, this is only set to increase even further.</p>
-        <p>FallCast has the aim to reduce these figures by monitoring gait and walking patterns over time and recognise when a fall is likely to occur in the following weeks. With a robust alert system integrated with an older person’s family or retirement village, this will allow steps to be taken to prevent the fall before it happens.</p>
-        <p>We understand that people just want to get on with their daily lives, so the product will be as invisible as possible. The technology is harmless to the wearer and will report gait statistics silently.</p>
+        <h1>Contact</h1>
+        <p>Please fill in the below form and we'll get back to you as soon as we can!</p>
 
-        <div class="qu-tiles">
-            <div class="qu-tiles-row">
-                <div class="qu-tile qu-tile--injury">
-                    <div class="qu-tile-icon">
-                        1/5
-                    </div>
-                    <div class="qu-tile-title">
-                        falls causes serious injury
-                    </div>
-                </div>
-                <div class="qu-tile qu-tile--hip">
-                    <div class="qu-tile-icon">
-                        >95%
-                    </div>
-                    <div class="qu-tile-title">
-                        of hip fractures caused by falling
-                    </div>
-                </div>
+        <div id="contact" class="qu-contact">
+            <div v-if="response">
+                <div v-text="response.message" class="qu-contact-response"></div>
             </div>
-            <div class="qu-tiles-row">
-                <div class="qu-tile qu-tile--brain">
-                    <div class="qu-tile-icon">
-                        <img src="/images/brain-light.png" alt="" />
-                    </div>
-                    <div class="qu-tile-title">
-                        most common cause of traumatic brain injuries
-                    </div>
+            <form v-if="formVisible" v-on:submit.prevent="submit">
+                <div class="qu-form-group">
+                    <input type="text" name="name" id="name" placeholder="Name" v-model="name" />
+                    <input type="email" name="email" id="email" placeholder="Email Address" v-model="email" />
                 </div>
-                <div class="qu-tile qu-tile--fear">
-                    <div class="qu-tile-icon">
-                        <img src="/images/stop-light.png" alt="" />
-                    </div>
-                    <div class="qu-tile-title">
-                        increased fear of falling
-                    </div>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message / Enquiry" v-model="message"></textarea>
+                <ul class="qu-errors">
+                    <li class="qu-error" v-for="error in errors">
+                        <span v-text="error"></span>
+                    </li>
+                </ul>
+                <button type="submit" name="submit" class="qu-button">Send!</button>
+            </form>
+            <div v-show="loading" class="qu-loading" style="display: none;">
+                <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
                 </div>
             </div>
         </div>
-
-        <h2>Senior Care &amp; Assisted Living</h2>
-        <p>For those working actively in senior care in retirement villages or rest homes, you will know how important it is and how challenging it can be to ensure residents are safe and continue feeling confident. As part of the FallCast solution, you will have access to a dashboard that makes it easy to keep an eye on fall risk for everyone in your facility with a FallCast device.</p>
     </section>
 
     <section class="qu-banner qu-banner--dark">
@@ -126,7 +107,7 @@
             <!--End mc_embed_signup-->
         </div>
     </section>
-
+    
     <footer class="qu-footer">
         <div class="qu-footer-content">
             <div class="qu-footer-copyright">© Copyright Quoralis 2018</div>
@@ -154,5 +135,8 @@
     <script src="/js/utils.js"></script>
     <script src="/js/subscribe.js"></script>
     <script src="/js/ga.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="/js/contact.js"></script>
 </body>
 </html>
