@@ -21,7 +21,7 @@ var app = new Vue({
             var vm = this;
             if (this.validateForm()) {
                 vm.loading = true;
-                fetch('http://localhost:8080/contact', {
+                fetch('https://quoralis-api-tieomtgsut.now.sh/contact', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
