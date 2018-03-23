@@ -61,7 +61,18 @@ p {
 }
 
 form {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+}
+
+form input,
+form textarea {
+    margin: 10px 0;
+}
+
+form input:first-child {
+    margin-top: 0;
 }
 
 input,
@@ -411,6 +422,13 @@ hr {
     max-width: 100px;
 }
 
+.qu-errors {
+    color: #ab301e;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 .qu-blog-article {
     border-bottom: 2px solid #7A1B0D;
 }
@@ -444,6 +462,88 @@ figcaption,
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.25);
     display: block;
     margin: 0 auto 30px;
+}
+
+.qu-contact {
+    position: relative;
+}
+
+.qu-contact-response {
+    font-weight: 700;
+}
+
+.qu-loading {
+    align-items: center;
+    background: rgba(242, 228, 211, 0.59);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    -webkit-animation: fade-in 0.3s 1 ease-in-out;
+    animation: fade-in 0.3s 1 ease-in-out;
+}
+
+@-webkit-keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.spinner {
+    margin: 100px auto 0;
+    width: 70px;
+    text-align: center;
+}
+  
+.spinner > div {
+    width: 18px;
+    height: 18px;
+    background-color: #7A1B0D;
+
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% { 
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    } 40% { 
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
 }
 
 .qu-mailchimpResponse {
@@ -512,6 +612,10 @@ figcaption,
     
     .qu-form-group input {
         margin: 0 8px 0 0;
+    }
+    
+    .qu-form-group input:last-child {
+        margin-right: 0;
     }
 
     button,
