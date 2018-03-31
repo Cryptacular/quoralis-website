@@ -1,0 +1,31 @@
+extends ../../layouts/main.pug
+
+block variables
+    - var title = "Our Blog"
+    - var description = "Blog of the Creators of FallCast"
+    - var heading = "Welcome to our blog."
+    - var path = "/blog"
+
+block content
+    #blog.qu-blog
+        div(v-if="loading")
+            section.qu-section
+                .qu-section-title
+                    h1 Loading...
+                .qu-section-content
+                    p One moment!
+        .qu-blog-article.qu-blog-article--loading(v-else v-for="post in posts" v-bind:class="{ 'qu-blog-article--loaded': !loading }")
+            section.qu-section
+                .qu-section-title.qu-section-title--small
+                    h1(v-text="post.title[0]")
+                    p.qu-blogPost-author Author:
+                        span(v-text="post['dc:creator'][0]")
+                .qu-section-content
+                    .qu-blog-post
+                        .qu-blogPost-content(v-html="post['content:encoded'][0]")
+                        .qu-blogPost-footer
+                            a.qu-button(v-bind:href="post.link[0]" target="_blank") Read on Medium
+
+block scripts
+    script(src="https://cdn.jsdelivr.net/npm/vue")
+    script(src="/js/blog.js")

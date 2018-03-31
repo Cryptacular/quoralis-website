@@ -1,0 +1,30 @@
+extends ../../layouts/main.pug
+
+block variables
+    - var title = "Contact Us"
+    - var description = "Contact the team at Quoralis"
+    - var heading = "Contact us!"
+    - var path = "/contact"
+
+block content
+    h1 Contact
+    p Please fill in the below form and we'll get back to you as soon as we can!
+
+    #contact.qu-contact
+        div(v-if="response")
+            .qu-contact-response(v-text="response.message")
+        form(v-if="formVisible" v-on:submit.prevent="submit")
+            .qu-form-group
+                input#name(type="text" name="name" placeholder="Name" v-model="name")
+                input#email(type="email" name="email" placeholder="Email Address" v-model="email")
+            textarea#message(name="message" cols="30" rows="10" placeholder="Message / Enquiry" v-model="message")
+            ul.qu-errors
+                li.qu-error(v-for="error in errors")
+                    span(v-text="error")
+            button.qu-button(type="submit" name="submit") Send!
+        .qu-loading(v-show="loading" style="display: none;")
+            +spinner
+
+block scripts
+    script(src="https://cdn.jsdelivr.net/npm/vue")
+    script(src="/js/contact.js")

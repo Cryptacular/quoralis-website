@@ -1,0 +1,37 @@
+extends ../layouts/main.pug
+
+block variables
+    - var title = "Creating FallCast"
+    - var description = "Quoralis is currently developing FallCast, a wearable solution designed to keep the elderly on their feet."
+    - var path = "/"
+    - var isHome = true
+
+block content
+    h1 FallCast
+    p Quoralis is currently developing FallCast, a wearable solution designed to keep the elderly on their feet. Suitable for use at home for independent living and at retirement villages for assisted living. Family and caregivers will receive alerts when we detect the older person is at risk of falling. This will allow the older person to stay confident and safe, so they can enjoy a more independent life for longer.
+        
+    h2 Impact
+    p Falls are one of the most common causes of injury in people aged 65+ and can lead to a massive reduction in quality of life or even death. It also brings a major cost that ACC has to pay each year and with an aging population, this is only set to increase even further.
+    p FallCast has the aim to reduce these figures by monitoring gait and walking patterns over time and recognise when a fall is likely to occur in the following weeks. With a robust alert system integrated with an older person’s family or retirement village, this will allow steps to be taken to prevent the fall before it happens.
+    p We understand that people just want to get on with their daily lives, so the product will be as invisible as possible. The technology is harmless to the wearer and will report gait statistics silently.
+
+    .qu-tiles
+        .qu-tiles-row
+            .qu-tile.qu-tile--injury
+                .qu-tile-icon 1/5
+                .qu-tile-title falls causes serious injury
+            .qu-tile.qu-tile--hip
+                .qu-tile-icon >95%
+                .qu-tile-title of hip fractures caused by falling
+        .qu-tiles-row
+            .qu-tile.qu-tile--brain
+                .qu-tile-icon
+                    img(src='/images/brain-light.png' alt='')
+                .qu-tile-title most common cause of traumatic brain injuries
+            .qu-tile.qu-tile--fear
+                .qu-tile-icon
+                    img(src='/images/stop-light.png' alt='')
+                .qu-tile-title increased fear of falling
+
+    h2 Senior Care &amp; Assisted Living
+    p For those working actively in senior care in retirement villages or rest homes, you will know how important it is and how challenging it can be to ensure residents are safe and continue feeling confident. As part of the FallCast solution, you will have access to a dashboard that makes it easy to keep an eye on fall risk for everyone in your facility with a FallCast device.
