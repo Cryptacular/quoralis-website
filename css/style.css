@@ -7,8 +7,18 @@ body {
     line-height: 30px;
 }
 
+b, strong {
+    font-weight: 700;
+}
+
 img {
     max-width: 100%;
+}
+
+ul {
+    list-style-type: disc;
+    margin-bottom: 18px;
+    padding-left: 30px;
 }
 
 a {
@@ -408,7 +418,7 @@ hr {
 }
 
 .qu-tile--fear {
-    background: #4B3261;
+    background: #5d3046;
 }
 
 .qu-tile-icon {
@@ -425,8 +435,10 @@ hr {
 .qu-errors {
     color: #ab301e;
     font-weight: 700;
-    text-align: center;
+    list-style-type: none;
     margin-bottom: 10px;
+    padding-left: 0;
+    text-align: center;
 }
 
 .qu-blog-article {

@@ -1,0 +1,125 @@
+mixin spinner
+    .spinner
+        .bounce1
+        .bounce2
+        .bounce3
+
+- var basePath = 'http://quoralis.com'
+- var twitterCardImagePath = basePath + '/images/twitter-card.jpg'
+- var isHome = false
+
+block variables
+
+doctype
+html(lang='en')
+    head
+        meta(charset='utf-8')
+
+        title Quoralis: #{title}
+        meta(name='description' content=description)
+        meta(name='author' content='Quoralis')
+        meta(name='theme-color' content='#161616')
+
+        //- Facebook OpenGraph
+        meta(property='og:type' content='website')
+        meta(property='og:title' content='Quoralis: ' + title)
+        meta(property='og:description' content=description)
+        meta(property='og:url' content=basePath + path)
+        meta(property='og:image' content=twitterCardImagePath)
+
+        //- Twitter card
+        meta(name='twitter:card' content='summary_large_image')
+        meta(name='twitter:title' content='Quoralis: ' + title)
+        meta(name='twitter:description' content=description)
+        meta(name='twitter:url' content=basePath + path)
+        meta(name='twitter:image' content=twitterCardImagePath)
+
+        //- Schema.org microdata
+        meta(itemprop='name' content='Quoralis: ' + title)
+        meta(itemprop='description' content=description)
+        meta(itemprop='image' content=twitterCardImagePath)
+
+        link(rel='stylesheet' href='/css/reset.css')
+        link(rel='stylesheet' href='/css/style.css?v=1.3')
+
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poiret+One|Raleway:400,700')
+
+        <!--[if lt IE 9]>
+            script(src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js')
+        <![endif]-->
+    body
+        section.qu-banner.qu-banner--hero
+            .qu-banner-header#quHeader
+                h1.qu-header-title
+                    img.qu-header-logo(src='/images/logo-white.png' alt='')
+                    .
+                        Quoralis
+                nav.qu-header-nav
+                    a.qu-nav-link(href='/') FallCast
+                    a.qu-nav-link(href='/blog') Blog
+                    a.qu-nav-link(href='/about') About Us
+                    a.qu-nav-link(href='/contact') Contact
+            .qu-banner-title
+                if isHome
+                    img.qu-banner-fallcast(src='/images/fallcast-logo-leaf.png' alt='FallCast')
+                    p The next generation of elderly care
+                else
+                    h2 #{heading}
+            .qu-banner-arrow
+                img#quScrollArrow(src='/images/leaf-arrow.png' alt='&darr;')
+        
+        section.qu-section
+            block content
+        
+        section.qu-banner.qu-banner--dark
+            .qu-section
+                h1 Updates
+                p Sign up for updates below to be the first to know as FallCast gets closer to launch, as well as occasional updates. No spam and your email address will not be shared with anyone, that’s a promise!
+
+                //- Begin MailChimp Signup Form
+                #mc_embed_signup
+                    form#mc-embedded-subscribe-form(action="https://quoralis.us17.list-manage.com/subscribe/post?u=cf5f59f8c820258fb30bdf359&amp;id=7b99786b1e" method="post" name="mc-embedded-subscribe-form" target="_blank")
+                        .qu-form-group
+                            input(type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Email Address" required)
+                            button.qu-button.qu-button--orange#mc-embedded-subscribe(type="submit" value="Subscribe" name="subscribe") Subscribe
+                        ul(class="qu-list qu-list--horizontal" id="mce-TYPE")
+                            li Please select:</li>
+                            li
+                                input#mce-TYPE-0(type="radio" value="65+" name="TYPE")
+                                label(for="mce-TYPE-0") 65+
+                            li
+                                input#mce-TYPE-1(type="radio" value="Family" name="TYPE")
+                                label(for="mce-TYPE-1") Family
+                            li
+                                input#mce-TYPE-2(type="radio" value="Caregiver/Nurse" name="TYPE")
+                                label(for="mce-TYPE-2") Caregiver/Nurse
+                            li
+                                input#mce-TYPE-3(type="radio" value="Retirement Village" name="TYPE")
+                                label(for="mce-TYPE-3") Retirement Village
+                        //- real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                        div(style="position: absolute; left: -5000px;" aria-hidden="true")
+                            input(type="text" name="b_cf5f59f8c820258fb30bdf359_7b99786b1e" tabindex="-1" value="")
+                    #mce-responses(class="clear")
+                        div.qu-mailchimpResponse.qu-mailchimpResponse--error#mce-error-response(style="display:none")
+                        div.qu-mailchimpResponse.qu-mailchimpResponse--success#mce-success-response(style="display:none")
+                //- End mc_embed_signup
+        footer.qu-footer
+            .qu-footer-content
+                .qu-footer-copyright © Copyright Quoralis 2018
+                a.qu-footer-logoLink(href='/')
+                    img.qu-footer-logo(src="/images/logo-white.png" alt="Quoralis")
+                .qu-footer-links
+                    a(href='/privacy-policy') Privacy policy
+                    a.qu-footer-iconLink(href='https://twitter.com/quoralis' target='_blank')
+                        img.qu-footer-icon(src="/images/twitter.png" alt="Twitter")
+                    a.qu-footer-iconLink(href='https://medium.com/quoralis' target='_blank')
+                        img.qu-footer-icon(src="/images/medium.png" alt="Medium")
+                    a.qu-footer-iconLink(href='https://www.linkedin.com/company/quoralis/' target='_blank')
+                        img.qu-footer-icon(src="/images/linkedin.png" alt="LinkedIn")
+
+        script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")
+        script(src="/js/utils.js")
+        script(src="/js/subscribe.js")
+        script(src="/js/ga.js")
+        
+        block scripts
