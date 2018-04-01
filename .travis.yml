@@ -11,4 +11,4 @@ deploy:
   provider: script
   script: bash scripts/deploy.sh
   on:
-    branch: continuous-deployment
+    branch: master
