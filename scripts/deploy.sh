@@ -2,7 +2,6 @@
 
 # Copy everything to build folder
 cp favicon.ico build
-cp -R css js images build
 
 # Deploy build folder
 cd build
