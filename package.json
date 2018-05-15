@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "serve .",
+    "start": "serve ./build",
     "build": "pug templates/pages -P -o build",
-    "watch": "pug templates/pages -P -w -o build"
+    "watch": "pug templates/pages -P -w -o build",
+    "postbuild": "copyfiles \"css/**/*\" \"images/**/*\" \"js/**/*\" build"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/Cryptacular/quoralis-website#readme",
   "devDependencies": {
+    "copyfiles": "^2.0.0",
     "pug": "^2.0.3",
     "pug-cli": "^1.0.0-alpha6",
     "serve": "^6.4.11"
