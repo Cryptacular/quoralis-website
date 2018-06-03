@@ -1,4 +1,7 @@
 (function() {
+    // Ping API to wake it up
+    fetch('https://quoralis-api-tieomtgsut.now.sh');
+
     function email(e, element, emailAddress) {
         element.href = emailAddress;
     }
