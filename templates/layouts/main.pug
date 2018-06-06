@@ -83,7 +83,7 @@ html(lang='en')
                             input(type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Email Address" required)
                             button.qu-button.qu-button--orange#mc-embedded-subscribe(type="submit" value="Subscribe" name="subscribe") Subscribe
                         ul(class="qu-list qu-list--horizontal qu-list--noBullet" id="mce-TYPE")
-                            li Please select:</li>
+                            li Please select:
                             li
                                 input#mce-TYPE-0(type="radio" value="65+" name="TYPE")
                                 label(for="mce-TYPE-0") 65+
@@ -118,6 +118,8 @@ html(lang='en')
                         img.qu-footer-icon(src="/images/linkedin.png" alt="LinkedIn")
 
         script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")
+        script(src="/js/polyfills/promise.min.js")
+        script(src="/js/polyfills/fetch.min.js")
         script(src="/js/utils.js")
         script(src="/js/subscribe.js")
         script(src="/js/ga.js")
