@@ -10,7 +10,7 @@ var app = new Vue({
     methods: {
         fetchPosts: function() {
             var vm = this;
-            fetch('https://quoralis-api-tieomtgsut.now.sh/posts', {
+            fetch('https://api.quoralis.com/posts', {
                     method: 'GET',
                     headers: {
                         'Accept': 'application/json',
