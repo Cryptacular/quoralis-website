@@ -1,0 +1,7 @@
+{
+  "name": "quoralis-website",
+  "env": {
+    "SMTP_USER": "@contact-smtp-user",
+    "SMTP_PASSWORD": "@contact-smtp-password"
+  }
+}
