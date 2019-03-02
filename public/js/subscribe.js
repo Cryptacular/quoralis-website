@@ -11,8 +11,14 @@
         }
 
         var email = $("#mce-EMAIL").val();
+        var firstName = $("#mce-FNAME").val();
+        var lastName = $("#mce-LNAME").val();
         var type = getType();
-        var data = "EMAIL=" + email + (type !== null ? "&TYPE=" + type : "") + "&b_df5bf00e508fb18b37ecd5a17_c510124f13=";
+        var data = "EMAIL=" + email + 
+                    (firstName !== null ? "&FNAME=" + firstName : "") + 
+                    (lastName !== null ? "&LNAME=" + lastName : "") + 
+                    (type !== null ? "&TYPE=" + type : "") + 
+                    "&b_df5bf00e508fb18b37ecd5a17_c510124f13=";
 
         $.getJSON(
             "https://quoralis.us17.list-manage.com/subscribe/post-json?u=cf5f59f8c820258fb30bdf359&amp;id=7b99786b1e&c=?", 

@@ -18,20 +18,15 @@
   },
   "homepage": "https://github.com/Cryptacular/quoralis-website#readme",
   "devDependencies": {
-    "copyfiles": "^2.0.0",
     "pug": "^2.0.3",
-    "pug-cli": "^1.0.0-alpha6",
-    "serve": "^7.0.0"
+    "pug-cli": "^1.0.0-alpha6"
   },
   "dependencies": {
-    "csurf": "^1.9.0",
-    "express": "^4.16.3",
+    "express": "^4.16.4",
     "express-validator": "^5.0.3",
-    "helmet": "^3.13.0",
-    "nodemailer": "^4.6.3",
-    "promise-polyfill": "^7.1.0",
+    "helmet": "^3.15.1",
+    "nodemailer": "^5.1.1",
     "request": "^2.83.0",
-    "whatwg-fetch": "^2.0.3",
     "xml2js": "^0.4.19"
   }
 }
