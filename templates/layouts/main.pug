@@ -84,7 +84,10 @@ html(lang='en')
                 #mc_embed_signup
                     form#mc-embedded-subscribe-form(action="https://quoralis.us17.list-manage.com/subscribe/post?u=cf5f59f8c820258fb30bdf359&amp;id=7b99786b1e" method="post" name="mc-embedded-subscribe-form" target="_blank")
                         .qu-form-group
-                            input(type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Email Address" required)
+                                input(type="text" value="" name="FNAME" id="mce-FNAME" placeholder="First Name")
+                                input(type="text" value="" name="LNAME" id="mce-LNAME" placeholder="Last Name")
+                        .qu-form-group
+                            input(type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Email Address (required)" required)
                             button.qu-button.qu-button--orange#mc-embedded-subscribe(type="submit" value="Subscribe" name="subscribe") Subscribe
                         //- real people should not fill this in and expect good things - do not remove this or risk form bot signups
                         div(style="position: absolute; left: -5000px;" aria-hidden="true")

@@ -374,6 +374,11 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 8px;
+}
+
+.qu-form-group:first-child {
+    margin-top: 0;
 }
 
 .qu-form-group input {
